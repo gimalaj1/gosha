@@ -55,13 +55,13 @@ func main() {
 			//fmt.Print("Попробуй еще раз:")
 		} else if guess < target {
 			if guesses == 9 {
-				fmt.Println("")
+				fmt.Println(" ")
 			} else {
 				fmt.Println("Задуманное число больше!")
 			}
 			//fmt.Print("Попробуй еще раз:")
 		} else {
-			fmt.Println("Угадал!")
+			fmt.Println("\n", "Угадал!")
 			success = true
 			break
 		}
