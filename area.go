@@ -5,14 +5,21 @@ import "fmt"
 func main() {
 	var amount, total float64
 
-	amount, err := paintNeeded(4.2, 3.0)
-	fmt.Println(err)
-	fmt.Printf("Необходимо %.2f литров.\n", amount)
+	amount, err := paintNeeded(4.2, -3.0)
+	if err == nil {
+		fmt.Printf("Необходимо %.2f литров.\n", amount)
+	} else {
+		fmt.Println(err)
+	}
 	total += amount
 
 	amount, err = paintNeeded(5.2, 3.5)
-	fmt.Println(err)
-	fmt.Printf("Необходимо %.2f литров.\n", amount)
+	if err == nil {
+		fmt.Printf("Необходимо %.2f литров.\n", amount)
+	} else {
+		fmt.Println(err)
+	}
+
 	total += amount
 
 	fmt.Printf("Итого нужно %.2f литров.\n", total)
